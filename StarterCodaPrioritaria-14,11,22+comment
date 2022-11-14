@@ -1,0 +1,39 @@
+package com.adecco.sistemaCoda;
+
+public class StarterCodaPrioritaria {
+
+	public static void main(String[] args) {
+		
+    //***importante ricordarsi di ridare un nuovo valore
+		
+		
+    CodaConPriorita codaConPriorita = new CodaConPriorita();
+		
+    
+    // con il termine new non facciamo altro che dare un nuovo valore
+		//(in questo caso) a CodaConPriorita
+		
+		
+    codaConPriorita.aggiungiPersona(new Persona("mario", 30));
+		codaConPriorita.aggiungiPersona(new Persona("luigi", 32));
+		codaConPriorita.aggiungiPersona(new Persona("Allegro Pensionato", 70));
+    
+    
+     //qui non faccio altro che ridare un nuovo valore/nome all'oggetto persona
+	   //immettendo la funzione aggiungiPersona già dichiarata in precedenza
+	
+		
+		System.out.println("Prossimo ----> " +codaConPriorita.restituisciProssimo());
+		System.out.println("Prossimo ----> " +codaConPriorita.restituisciProssimo());
+		System.out.println("Prossimo ----> " +codaConPriorita.restituisciProssimo());
+		System.out.println("Prossimo ----> " +codaConPriorita.restituisciProssimo());
+     
+    
+    //chiedo di stampare a video il testo: "prossimo----->"
+		//+ l'oggetto codaConPriorita.con l'estensione restituisciProssimo
+		//già precedentemente dichiarata---> vedi classe CodaConPriorita
+		
+
+	}
+
+}
