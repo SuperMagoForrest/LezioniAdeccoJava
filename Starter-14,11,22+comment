@@ -1,0 +1,52 @@
+package com.adecco.sistemaCoda;
+
+import java.util.Random;
+
+public class Starter {
+
+	public static void main(String[] args) {
+
+		Random random = new Random();
+		Coda coda = new Coda();
+
+		for (int i = 0; i < 10; i++) {
+			// Persona+1 = new Persona();
+			coda.aggiungiPersona(new Persona("Cognome " + i, random.nextInt(10, 70)));
+		}
+
+		System.out.println(coda.contaPersoneInCoda());
+
+		System.out.println("###########################");
+
+		// tipo di implementazione chiamata: implementazione della coda con logica di
+		// tipo FIFO =first in first out, ovvero
+		// il primo ad entrare è anche il primo ad uscire
+		// un altro tipo di implementazione è il LIFO, ovvero l'ultimo ad entrare è il
+		// primo ad uscire questo tendenzialmente è complementare
+		// a delle condizioni.
+    // esempio in ambito reale : l'ospedale e i codici d'ingresso
+		// in prontoSoccorso
+
+		coda.stampaPersona();
+
+		System.out.println("");
+
+		System.out.println("Persona servita  . .. .. . .. " + coda.restituisciProssimo());
+		System.out.println("Persona servita  . .. .. . .. " + coda.restituisciProssimo());
+		System.out.println("Persona servita  . .. .. . .. " + coda.restituisciProssimo());
+		System.out.println("Persona servita  . .. .. . .. " + coda.restituisciProssimo());
+
+		System.out.println();
+
+		coda.stampaPersona();
+
+		for (int i = 0; i < 10; i++)
+			System.out.println("Persona servita  . .. .. . .. " + coda.restituisciProssimo());
+
+		System.out.println();
+
+		coda.stampaPersona();
+
+	}
+
+}
