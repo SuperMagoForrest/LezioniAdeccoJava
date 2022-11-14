@@ -1,0 +1,64 @@
+package com.adecco.sistemaCoda;
+
+public class CodaConPriorita extends Coda {
+
+	
+	public CodaConPriorita() {
+		super();
+	}
+	//private significa solo all'interno della classe
+	//mi restituisce la persona con eta>=60 oppure 
+	//se non trova niente mi ridà null
+	// se persona maggiore è diversa dal valore null, allora prendi il getPersone
+	// rim
+	//"super.restituisci prossimo"lo faccio perchè non voglio creare niente di nuovo e riprendermi l'oggetto di una determinata
+	// classe, sfruttando uno dei principi della programmazione ad oggetti
+	//super invoca la proprietà della super classe
+	//qualora non mettessi il super, si andrebbe in "stackOverFlow Error" ovvero la funzione richiama se stessa
+	//all'infinito
+	
+	@Override
+	public Persona restituisciProssimo() {
+		
+		Persona personaMaggiore = cercaPersonaMaggioreDi60();
+		
+		if(personaMaggiore != null) {
+			super.getPersone().remove(personaMaggiore);
+			return personaMaggiore;
+		}
+		else {
+			return super.restituisciProssimo();
+		}
+			
+		
+	}
+	
+	
+	/**
+	 * 
+	 * mi restituisce la persona
+	 * con >= 60 oppure se non trova niente
+	 * mi retuisce null.
+	 * 
+	 * @return
+	 */
+	private Persona cercaPersonaMaggioreDi60() {
+		
+		for(int i = 0 ; i < super.getPersone().size() ; i++) {
+			
+			if(super.getPersone().get(i).getEta() >= 60)
+				return super.getPersone().get(i);
+			
+		}
+		
+		return null;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}
