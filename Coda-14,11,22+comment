@@ -1,0 +1,76 @@
+package com.adecco.sistemaCoda;
+
+import java.util.ArrayList;
+
+public class Coda {
+
+	private ArrayList<Persona> persone;
+	// i modificatori di accesso sono 4: Public, Private,Protected, e default in cui
+	// non serve specificare il termine prima
+	// degli oggetti
+
+	// ciclo for each
+	// in questo caso p è un oggetto di tipo persona assumendone le proprietà
+
+	// in questo caso se persone sono vuote e non c?è piu niente da rimuovere
+	// ovvero il vettore è vuoto ridammi il valore null
+	// isEmpty come controllo
+
+	// persona le faccio assumere un valorr di tipo temporaneo
+	// if(this.persone.size() <= 0)
+	// return null;
+
+	// col void non ci vogliono mai i return.
+	// ma se voglio uscire dalla funzione uso return;
+
+	public Coda() {
+		this.persone = new ArrayList<>();
+	}
+
+	public ArrayList<Persona> getPersone() {
+		return persone;
+	}
+
+	public void stampaPersona() {
+
+		for (Persona p : persone)
+			System.out.println(p);
+
+	}
+
+	public Persona restituisciProssimo() {
+
+//			if(this.persone.size() <= 0)
+//				return null;
+
+		// se il vettore è vuoto
+		if (this.persone.isEmpty())
+			return null;
+
+		Persona tmpPersona = this.persone.get(0);
+		this.persone.remove(0);
+
+		return tmpPersona;
+
+	}
+
+	public int contaPersoneInCoda() {
+		return this.persone.size();
+	}
+
+	public void aggiungiPersona(Persona persona) {
+
+		if (persona == null)
+			return; // ho terminato
+
+		this.persone.add(persona);
+
+	}
+
+}
+
+
+
+
+
+
