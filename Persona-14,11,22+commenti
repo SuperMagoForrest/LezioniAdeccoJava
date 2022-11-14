@@ -1,0 +1,57 @@
+package com.adecco.sistemaCoda;
+
+public class Persona {
+
+	private String cognome;
+	private int eta;
+
+	public Persona() {
+		this("rossi", 20);
+	}
+
+	public Persona(String cognome, int eta) {
+		setCognome(cognome);
+		setEta(eta);
+	}
+
+	@Override
+	// @Override significa sovrascrivere effettuando un controllo
+	// sovrascrivere = overriding = sovrascrittura di un metodo ereditato
+	// dalla classe padre andando poi a modificarne i metodi
+
+	public String toString() {
+		return this.cognome + " " + this.eta;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
+	public int getEta() {
+		return eta;
+	}
+
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+
+	public void setEta(int eta) {
+		this.eta = eta;
+	}
+	// differenza fra overriding e overloading
+	// overloading è riferito ai metodi e significa sovraccarico dei metodi;
+	// significa che io posso avere metodi di uguale nome distinguibili attraverso
+	// la signature(ovvero la firma cioè ciò che contraddistingue gli oggetti)
+	// nome avente però parametri diversi
+	// in java il tipo di ritorno non è costituito dalla firma del metodo
+
+}
+
+
+
+
+
+
+
+
+
