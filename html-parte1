@@ -1,0 +1,20 @@
+con java faccio il backend
+vedendo nel pomeriggio spring boot che è il framework che lavora col web
+tuttavia per mostrare a video i dati di back end e spostarli poi a front end
+utilizzo html
+Studiare html su w3school sulla parte html bootstrap è fatto molto bene
+html funziona a scatola
+o meglio, a matriosca 
+la parte più importante è il body
+h1 o h2 o h3 fino a h6 sono utilizzati in modo semantico
+per riconoscere l'importanza del testo
+es h1 sarà prioritario
+i tag vanno da h1 a h6
+<br> significa vai a capo
+<p> significa paragrafo e si chiudono sempre con lo slash davanti es</p>
+<pre> mantiene la struttura cosi come gli è stata data
+utilizzare google color picker ricopiandone il codice esadecimale per reperire colori da usare html
+il nostro due punti : su html sono come l'uguale su java 
+il font-size è una proprietà di html attraverso la quale impostiamo dettagliatamente la grandezza del font di quella scritta
+reference consigliata per studiare html: mozilla documentation html
+utilizzare control f per la ricerca dei comandi 
