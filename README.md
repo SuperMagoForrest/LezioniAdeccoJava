@@ -1,0 +1,6 @@
+![mySite](https://user-images.githubusercontent.com/117987511/202234922-f6e884d5-a5d4-468b-ae78-1aa52d65755e.png)
+![mySiteCitta](https://user-images.githubusercontent.com/117987511/202235044-c489c1bb-d732-437b-9948-0e01539e0d74.png)
+![mySiteLink](https://user-images.githubusercontent.com/117987511/202235177-a98b539a-5b18-43d8-b44b-597d4bcf863e.png)
+![mySiteLinkReferral](https://user-images.githubusercontent.com/117987511/202235180-53ee1eb7-29e1-4a7d-9ad3-d72802494dbc.png)
+![mySiteNatura](https://user-images.githubusercontent.com/117987511/202235359-4c546cc2-c21f-476c-80d8-91d49df7c7f9.png)
+![mySiteTramonti](https://user-images.githubusercontent.com/117987511/202235512-c5ae4633-6674-48a6-966d-81d3ecfc5cb5.png)
