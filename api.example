@@ -1,0 +1,35 @@
+package com.adecco.apiExample.restController;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.adecco.apiExample.model.Persona;
+import com.adecco.apiExample.service.PersonaService;
+
+@org.springframework.web.bind.annotation.RestController
+
+public class RestController {
+
+	@Autowired
+	private PersonaService personaService;
+
+	@GetMapping("/api/random")
+	public Persona getPersona() {
+
+		return personaService.generaPersona();
+	}
+
+	@GetMapping("/api/getAll")
+	public ArrayList<Persona> getAll() {
+
+		ArrayList<Persona> persone = new ArrayList<>();
+
+		persone.add(new Persona("dave", 51));
+
+		return persone;
+
+	}
+
+}
