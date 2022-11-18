@@ -1,0 +1,45 @@
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.demo.model.Fox;
+
+@org.springframework.stereotype.Controller
+public class Controller {
+
+	@GetMapping("/")
+	public ModelAndView index() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("index");
+//Fetch data=ottenere dato
+
+		RestTemplate restTemplate = new RestTemplate();
+// T significa per type
+
+		String url = "https://randomfox.ca/floof/";// richiamo url
+
+		restTemplate.getForObject(url, Fox.class);
+//richiede un oggetto
+//a sinistra url dove pescare il dato e a destra come dovrà essere deserializzato
+//è come se facesse la richiesta http
+
+//funzione che mi prende dei parametri in input a sinistra la richiesta
+//a destra l'output
+		Fox risFox = restTemplate.getForObject(url, Fox.class);
+
+		System.out.println(risFox);
+		System.out.println("image--->" + risFox.getImage());
+		System.out.println("link--->" + risFox.getLink());
+
+//manda il dato alla pagina html con addObject
+//a sinistra label e a destra tipo di dato
+
+		modelAndView.addObject("url", risFox.getImage());
+//modelAndView.addObject("url", risFox);
+
+		return modelAndView;
+	}
+
+}
