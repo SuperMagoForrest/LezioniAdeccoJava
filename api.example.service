@@ -1,0 +1,39 @@
+package com.adecco.apiExample.service;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+import org.springframework.stereotype.Service;
+
+import com.adecco.apiExample.model.Persona;
+
+@Service
+//per implementare la logica di tutte le tue funzioni
+//
+public class PersonaService {
+
+	public Persona generaPersona() {
+		Random random = new Random();
+
+		ArrayList<String> nomiDisponibili = new ArrayList<>();
+
+		nomiDisponibili.add("paolo");
+		nomiDisponibili.add("ebola");
+		nomiDisponibili.add("franco il piccolo");
+		nomiDisponibili.add("polpo");
+		nomiDisponibili.add("crosta");
+		nomiDisponibili.add("cazzola");
+		nomiDisponibili.add("drgoscemo");
+		String nome = nomiDisponibili.get(random.nextInt(nomiDisponibili.size()));
+		int eta = random.nextInt(0, 100);
+
+		Persona persona = new Persona(nome, eta);
+
+		return persona;
+
+	}
+
+	
+	}
+
+
