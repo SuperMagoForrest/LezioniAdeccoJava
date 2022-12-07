@@ -1,0 +1,6 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ProvaComponent } from './prova/prova.component';
+import { TabellaComponent } from './tabella/tabella.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
+export const AppRoutes: Routes = [];
