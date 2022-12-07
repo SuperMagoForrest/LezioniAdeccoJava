@@ -1,0 +1,142 @@
+<div class="container">
+  <div class="row">
+    <div class="col md-12">
+      <mat-toolbar-row>
+        <span>DIO PORCO</span>
+        <span class="example-spacer"></span>
+        <mat-icon
+          class="example-icon"
+          aria-hidden="false"
+          aria-label="Example user verified icon"
+          >verified_user</mat-icon
+        >
+      </mat-toolbar-row>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>
+<button mat-fab extended routerLink="/home">
+  <mat-icon [routerLinkActive]="['home']">home</mat-icon>
+  Home
+</button>
+<button mat-fab extended style="color: rgb(255, 230, 9)" routerLink="/tabella">
+  <mat-icon [routerLinkActive]="['tabella']" style="color: rgb(192, 231, 15)"
+    >tabella</mat-icon
+  >
+  tabella
+</button>
+<button mat-fab extended style="color: rgb(9, 185, 255)" routerLink="/prova">
+  <mat-icon  style="color: #00fa4b">
+  prova</mat-icon>
+</button>
+
+<div class="containter">
+  <div class="row">
+    <div class="col md-6">
+      <p>
+        <mat-toolbar>
+          <span>My Application</span>
+        </mat-toolbar>
+      </p>
+
+      <p>
+        <mat-toolbar>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with menu icon"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>My App</span>
+          <span class="example-spacer"></span>
+          <button
+            mat-icon-button
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon"
+          >
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+          >
+            <mat-icon>share</mat-icon>
+          </button>
+        </mat-toolbar>
+      </p>
+
+      <p>
+        <mat-toolbar color="primary">
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with menu icon"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>My App</span>
+          <span class="example-spacer"></span>
+          <button
+            mat-icon-button
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon"
+          >
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+          >
+            <mat-icon [routerLinkActive]="['/prova']">share</mat-icon>
+          </button>
+        </mat-toolbar>
+      </p>
+
+      <p>
+        <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            <span>applicazione di prova</span>
+            <span class="example-spacer"></span>
+            <button
+              mat-icon-button
+              class="example-icon"
+              aria-label="Example icon-button with menu icon"
+            >
+              <mat-icon>menu</mat-icon>
+            </button>
+          </mat-toolbar-row>
+
+          <mat-toolbar-row>
+            <span>Second Line</span>
+            <span class="example-spacer"></span>
+            <button
+              mat-icon-button
+              class="example-icon favorite-icon"
+              aria-label="Example icon-button with heart icon"
+            >
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              class="example-icon"
+              aria-label="Example icon-button with share icon"
+              [routerLinkActive]="['/home']"
+            >
+              <mat-icon>share</mat-icon>
+            </button>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </p>
+    </div>
+  </div>
+</div>
+
+<mat-tab-group>
+  <mat-tab label="home"> </mat-tab>
+  <mat-tab label="prova"> </mat-tab>
+  <mat-tab label="tabella"></mat-tab>
+</mat-tab-group>
+<button mat-raised-button color="primary" routerLink="/home">home</button>
